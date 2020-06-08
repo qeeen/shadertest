@@ -15,13 +15,13 @@ function setup(){
 
 function draw(){
 	background(0);
+	resetShader();
 	camera(cos(look_val)*300, uplook_val*20, sin(look_val)*300, 0, 0, 0, 0, 1, 0);
 
 	stroke(0);
 	fill(200, 0, 0);
-	translate(0, 0, 0);
 	//rotateY(frameCount/5);
-	box(50, 50, 50);
+	box(20);
 
 	noStroke();
 
@@ -32,7 +32,7 @@ function draw(){
 		shad.setUniform("u_mouse", [mouseX, mouseY]);
 	}
 
-	sphere(50);
+	box(50);
 }
 
 function keyPressed(){
